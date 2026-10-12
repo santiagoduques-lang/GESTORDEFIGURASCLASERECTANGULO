@@ -8,7 +8,7 @@ import controlador.ControladorRectangulo;
  *
  * @author gabby
  */
-public class Vista extends javax.swing.JFrame {
+public class Vista  extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Vista.class.getName());
 
