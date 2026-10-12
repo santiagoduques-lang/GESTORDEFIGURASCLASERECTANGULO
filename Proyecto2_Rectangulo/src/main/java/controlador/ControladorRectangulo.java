@@ -32,4 +32,32 @@ public class ControladorRectangulo {
         return rectangulo + "\nÁrea: " + rectangulo.calcularArea()
                 + "\nPerímetro: " + rectangulo.calcularPerimetro();
     }
+    
+ public String mover(double dx, double dy) {
+        if (rectangulo == null) {
+            return "Primero debe crear el rectángulo.";
+        }
+        rectangulo.mover(dx, dy);
+        return "Rectángulo movido:\n" + rectangulo;
+    }
+
+    public String escalar() {
+        if (rectangulo == null) {
+            return "Primero debe crear el rectángulo.";
+        }
+        rectangulo.escalar();
+        return "Rectángulo escalado al doble:\n" + rectangulo + "\nNueva área: " + rectangulo.calcularArea();
+    }
+
+    public String verificarPunto(double x, double y) {
+        if (rectangulo == null) {
+            return "Primero debe crear el rectángulo.";
+        }
+        Punto punto = new Punto(x, y);
+        if (rectangulo.contienePunto(punto)) {
+            return "El punto " + punto + " SÍ está dentro del rectángulo.";
+        } else {
+            return "El punto " + punto + " NO está dentro del rectángulo.";
+        }
+    }
 }
