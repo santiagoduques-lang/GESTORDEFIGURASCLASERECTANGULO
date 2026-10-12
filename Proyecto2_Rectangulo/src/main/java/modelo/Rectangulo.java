@@ -21,5 +21,20 @@ public class Rectangulo extends FiguraGeometrica {
 
     public Punto getVertice1() { return vertice1; }
     public Punto getVertice2() { return vertice2; }
+public double calcularBase() {
+        double base = vertice2.getX() - vertice1.getX();
+        if (base < 0) {
+            base = base * -1;
+        }
+        return base;
+    }
 
+    /** Altura = diferencia entre las y (siempre positiva). */
+    public double calcularAltura() {
+        double altura = vertice2.getY() - vertice1.getY();
+        if (altura < 0) {
+            altura = altura * -1;
+        }
+        return altura;
+    }
 }
