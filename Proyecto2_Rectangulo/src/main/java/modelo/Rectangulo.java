@@ -37,4 +37,23 @@ public double calcularBase() {
         }
         return altura;
     }
+    
+     @Override
+    public double calcularArea() {
+        return calcularBase() * calcularAltura();
+    }
+
+    public double calcularPerimetro() {
+        return 2 * (calcularBase() + calcularAltura());
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + " | Vértice 1: " + vertice1
+                + " | Vértice 2: " + vertice2
+                + " | Base: " + calcularBase()
+                + " | Altura: " + calcularAltura();
+    }
+    
 }
