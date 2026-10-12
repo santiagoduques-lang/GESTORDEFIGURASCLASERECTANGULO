@@ -29,7 +29,7 @@ public double calcularBase() {
         return base;
     }
 
-    /** Altura = diferencia entre las y (siempre positiva). */
+
     public double calcularAltura() {
         double altura = vertice2.getY() - vertice1.getY();
         if (altura < 0) {
@@ -55,5 +55,19 @@ public double calcularBase() {
                 + " | Base: " + calcularBase()
                 + " | Altura: " + calcularAltura();
     }
-    
+    @Override
+    public void mover(double dx, double dy) {
+        vertice1.setX(vertice1.getX() + dx);
+        vertice1.setY(vertice1.getY() + dy);
+        vertice2.setX(vertice2.getX() + dx);
+        vertice2.setY(vertice2.getY() + dy);
+    }
+
+
+    public void escalar(double factor) {
+        double nuevoX = vertice1.getX() + (vertice2.getX() - vertice1.getX()) * factor;
+        double nuevoY = vertice1.getY() + (vertice2.getY() - vertice1.getY()) * factor;
+        vertice2.setX(nuevoX);
+        vertice2.setY(nuevoY);
+    }
 }
