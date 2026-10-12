@@ -70,4 +70,25 @@ public double calcularBase() {
         vertice2.setX(nuevoX);
         vertice2.setY(nuevoY);
     }
+    
+  public boolean contienePunto(Punto punto) {
+        double xMenor = vertice1.getX();
+        double xMayor = vertice2.getX();
+        if (xMenor > xMayor) {
+            xMenor = vertice2.getX();
+            xMayor = vertice1.getX();
+        }
+        double yMenor = vertice1.getY();
+        double yMayor = vertice2.getY();
+        if (yMenor > yMayor) {
+            yMenor = vertice2.getY();
+            yMayor = vertice1.getY();
+        }
+        if (punto.getX() >= xMenor && punto.getX() <= xMayor
+                && punto.getY() >= yMenor && punto.getY() <= yMayor) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
