@@ -23,5 +23,17 @@ public class FiguraGeometrica {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+     public double calcularArea() {
+        return 0;
+    }
+
+    public void mover(double dx, double dy) {
+    }
+
+    @Override
+    public String toString() {
+        return "Figura: " + nombre;
+    }
 
 }
