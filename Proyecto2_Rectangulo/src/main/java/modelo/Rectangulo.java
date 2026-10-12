@@ -64,12 +64,13 @@ public double calcularBase() {
     }
 
 
-    public void escalar(double factor) {
-        double nuevoX = vertice1.getX() + (vertice2.getX() - vertice1.getX()) * factor;
-        double nuevoY = vertice1.getY() + (vertice2.getY() - vertice1.getY()) * factor;
+    public void escalar() {
+        double nuevoX = vertice1.getX() + (vertice2.getX() - vertice1.getX()) * 2;
+        double nuevoY = vertice1.getY() + (vertice2.getY() - vertice1.getY()) * 2;
         vertice2.setX(nuevoX);
         vertice2.setY(nuevoY);
     }
+
     
   public boolean contienePunto(Punto punto) {
         double xMenor = vertice1.getX();
